@@ -6,7 +6,7 @@ echo "========================================"
 echo " 🧱  AlwaysZakzz Protect Installer"
 echo "========================================"
 echo
-read -p "Masukkan ID Admin Utama (misal: 1): " ADMIN_ID
+read -p "Masukkan ID Admin Utama (Contoh: 1): " ADMIN_ID
 
 if ! [[ "$ADMIN_ID" =~ ^[0-9]+$ ]]; then
     echo "❌ ID Admin harus berupa angka!"
