@@ -3,7 +3,7 @@
 # © 2025 Protect by AlwaysZakzz
 
 echo "========================================"
-echo " 🧱  AlwaysZakzz Protect Installer
+echo " 🧱  AlwaysZakzz Protect Installer"
 echo "========================================"
 echo
 read -p "Masukkan ID Admin Utama (misal: 1): " ADMIN_ID
@@ -52,7 +52,7 @@ fi
 # === C. Anti Ubah Data User ===
 fileC="/var/www/pterodactyl/app/Http/Controllers/Admin/UserController.php"
 echo "🧱 Mengganti kode Anti Ubah Data User..."
-cat <<EOF > "$fileC"
+cat <<'EOF' > "$fileC"
 public function update(UserFormRequest \$request, User \$user): RedirectResponse
 {
     \$restrictedFields = ['password', 'email', 'first_name', 'last_name'];
@@ -93,7 +93,7 @@ echo "✅ C. Anti Ubah Data User berhasil diganti."
 # === D. Anti Intip Location ===
 fileD="/var/www/pterodactyl/app/Http/Controllers/Admin/LocationController.php"
 echo "🧱 Mengganti kode Anti Intip Location..."
-cat <<EOF > "$fileD"
+cat <<'EOF' > "$fileD"
 <?php  
 
 namespace Pterodactyl\Http\Controllers\Admin;  
